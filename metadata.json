@@ -1,0 +1,6 @@
+{
+  "name": "Cogni-Q+ — Quantum Cognition Brain Training",
+  "description": "An immersive quantum cognition-inspired brain training platform exploring attention, memory, learning, perception, and decision-making under uncertainty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
