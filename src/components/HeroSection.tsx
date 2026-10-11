@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Compass, Atom, Sparkles, RefreshCw } from 'lucide-react';
 import { sound } from '../utils/sound';
+import quantumMindImg from '../assets/images/cogni_quantum_mind_1791699498031.jpg';
 
 interface HeroSectionProps {
   onBeginJourney: () => void;
@@ -205,14 +206,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="relative rounded-2xl overflow-hidden border border-slate-700/70 shadow-[0_0_40px_rgba(0,0,0,0.8)] bg-slate-900/60 group">
             <div className="relative aspect-video w-full overflow-hidden bg-slate-950">
               <img
-                src="/src/assets/images/cogni_quantum_mind_1791699498031.jpg"
+                src={quantumMindImg}
                 alt="Quantum Cognition Visual Representation"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                onError={(e) => {
-                  // Fallback container in case of any loading failure
-                  e.currentTarget.style.display = 'none';
-                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
               <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs">

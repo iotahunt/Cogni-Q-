@@ -13,6 +13,7 @@ import {
 import { DECISION_SCENARIOS, calculateDecisionProfile } from '../../data/gameContent';
 import { DecisionScenario, DecisionProfile } from '../../types/cognition';
 import { sound } from '../../utils/sound';
+import moralCompassImg from '../../assets/images/cogni_moral_compass_1791699524852.jpg';
 
 interface DecisionGameProps {
   onReturnToLab: () => void;
@@ -132,13 +133,10 @@ export const DecisionGame: React.FC<DecisionGameProps> = ({
           <div className="relative rounded-2xl overflow-hidden border border-amber-500/25 bg-black/80 flex items-center">
             <div className="w-1/3 aspect-[4/3] overflow-hidden">
               <img
-                src="/src/assets/images/cogni_moral_compass_1791699524852.jpg"
+                src={moralCompassImg}
                 alt="Minimalist sculpture of moral choices and scales"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
               />
             </div>
             <div className="w-2/3 p-4 sm:p-6 text-xs text-amber-200/90 space-y-1.5">

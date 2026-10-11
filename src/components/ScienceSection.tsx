@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BookOpen, Layers, GitCompare, Sparkles, HelpCircle } from 'lucide-react';
 import { sound } from '../utils/sound';
+import labInstallationImg from '../assets/images/cogni_lab_installation_1791699511418.jpg';
 
 interface ScienceSectionProps {
   onEnterChallenges?: () => void;
@@ -68,13 +69,10 @@ export const ScienceSection: React.FC<ScienceSectionProps> = ({ onEnterChallenge
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-950">
               <div className="aspect-[16/10] w-full overflow-hidden">
                 <img
-                  src="/src/assets/images/cogni_lab_installation_1791699511418.jpg"
+                  src={labInstallationImg}
                   alt="Futuristic Cognitive Science Experimental Lab"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
                 />
               </div>
               <div className="p-4 bg-slate-900/90 border-t border-slate-800 text-xs text-slate-300 flex items-center justify-between">

@@ -14,6 +14,7 @@ import {
 import { PERCEPTION_QUESTIONS } from '../../data/gameContent';
 import { PerceptionQuestion } from '../../types/cognition';
 import { sound } from '../../utils/sound';
+import realityGlitchImg from '../../assets/images/cogni_reality_glitch_1791699550933.jpg';
 
 interface PerceptionGameProps {
   onReturnToLab: () => void;
@@ -139,13 +140,10 @@ export const PerceptionGame: React.FC<PerceptionGameProps> = ({
           <div className="relative rounded-2xl overflow-hidden border border-purple-900/40 bg-black/60 flex items-center">
             <div className="w-1/3 aspect-[4/3] overflow-hidden">
               <img
-                src="/src/assets/images/cogni_reality_glitch_1791699550933.jpg"
+                src={realityGlitchImg}
                 alt="Optical perception and impossible geometry artwork"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
               />
             </div>
             <div className="w-2/3 p-4 text-xs text-slate-300 space-y-1.5">
